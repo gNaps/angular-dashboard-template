@@ -1,27 +1,31 @@
-# DashboardAppBoilerplate
+# Dashboard boilerplate angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+A simple starter template for dashboard in angular. This boilerplate includes all layout's components, services for multilanguage and dark/light theme.
 
-## Development server
+Scaffolding folder is made for separate UI and business logic.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Run Locally
 
-## Code scaffolding
+Clone the project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+  git clone https://github.com/gNaps/angular-dashboard-template.git
+```
 
-## Build
+Go to the project directory
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+  cd angular-dashboard-template
+```
 
-## Running unit tests
+Install dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  npm install
+```
 
-## Running end-to-end tests
+Start the server
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  npm run start
+```
