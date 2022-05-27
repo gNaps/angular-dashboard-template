@@ -1,0 +1,27 @@
+<nav class="top-bar">
+  <i role="button" class="fa-solid fa-bars fa-2x" (click)="toggleBar()"></i>
+  <div class="d-flex align-items-center gap-3">
+    <i class="fa-regular fa-bell fa-2x"></i>
+    <ng-select
+      [items]="languages"
+      bindValue="key"
+      bindLabel="value"
+      [clearable]="false"
+      [(ngModel)]="currentLang"
+      (change)="changeLanguage($event)"
+    >
+      <ng-template
+        ng-option-tmp
+        let-item="item"
+        let-index="index"
+        let-search="searchTerm"
+      >
+        <span>{{ item.flag }} {{ item.value }}</span>
+      </ng-template>
+      <ng-template ng-label-tmp let-item="item">
+        <span>{{ item.flag }} {{ item.value }}</span>
+      </ng-template>
+    </ng-select>
+    <app-user-avatar></app-user-avatar>
+  </div>
+</nav>

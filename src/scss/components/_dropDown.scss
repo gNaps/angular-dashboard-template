@@ -1,0 +1,30 @@
+.theme-dark {
+  .ng-select-container {
+    background: #1f2128 !important;
+    border-color: #33353b !important;
+    color: #fff !important;
+  }
+
+  .ng-dropdown-panel {
+    border-color: #33353b !important;
+
+    .ng-dropdown-panel-items {
+      background-color: #242731;
+      .ng-option {
+        background-color: #242731 !important;
+        color: #fff !important;
+
+        &.ng-option-selected {
+          background-color: #355dff !important;
+        }
+      }
+    }
+  }
+}
+
+.theme-light {
+  .ng-option-selected {
+    background-color: #355dff !important;
+    color: #fff !important;
+  }
+}

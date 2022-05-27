@@ -1,0 +1,38 @@
+$themes: (
+  "light": (
+    "primary": #666cff,
+    "secondary": #43bccd,
+    "background": #ffffff,
+    "background-darker": #f7f7f7,
+    "border": #e4e4e4,
+    "text": #1f2128,
+    "secondary-text": #808191,
+    "sidebar-link-hover": #666cff,
+    "toggle-active": #d4d4d4,
+  ),
+  "dark": (
+    "primary": #666cff,
+    "secondary": #db5375,
+    "background": #1f2128,
+    "background-darker": #191b20,
+    "border": #33353b,
+    "text": #ffffff,
+    "secondary-text": #808191,
+    "sidebar-link-hover": #ffffff,
+    "toggle-active": #d4d4d4,
+  ),
+);
+
+@each $theme-name, $properties in $themes {
+  .theme-#{$theme-name} {
+    // define a css variable for each property
+    @each $name, $property in $properties {
+      --#{$name}: #{$property};
+
+      @if ($name == "primary") {
+        --#{$name}-dark: #{darken($property, 10%)};
+        --#{$name}-darker: #{darken($property, 20%)};
+      }
+    }
+  }
+}
